@@ -1,18 +1,19 @@
 import React from 'react';
+import { View, Text, Button } from 'react-native';
+
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
-  View,
 } from 'react-native';
 
-function App(): JSX.Element {
+function login(): JSX.Element {
   return (
-    <SafeAreaView style={styles.container}>
+    <View>
+        <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#49708A" />
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.loginBox}>
@@ -32,6 +33,7 @@ function App(): JSX.Element {
         </View>
       </ScrollView>
     </SafeAreaView>
+    </View>
   );
 }
 
@@ -93,4 +95,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default login;

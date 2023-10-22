@@ -10,24 +10,25 @@ import {
   View,
 } from 'react-native';
 
-function App(): JSX.Element {
+function register(): JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#49708A" />
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.loginBox}>
-          <Text style={styles.loginTitle}>Iniciar Sesión</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Nombre de usuario/Correo electrónico"
-          />
+          <Text style={styles.loginTitle}>Registro</Text>
+          <TextInput style={styles.input} placeholder="Nombre" />
+          <TextInput style={styles.input} placeholder="Apellidos" />
+          <TextInput style={styles.input} placeholder="RUT" />
+          <TextInput style={styles.input} placeholder="Correo electrónico" />
+          <TextInput style={styles.input} placeholder="Nombre de usuario" />
           <TextInput style={styles.input} placeholder="Contraseña" secureTextEntry={true} />
+          <TextInput style={styles.input} placeholder="Confirmar contraseña" secureTextEntry={true} />
           <Text style={styles.signupText}>
-            ¿No tienes cuenta? <Text style={styles.signupLink}>Regístrate</Text>
+            ¿Ya tienes una cuenta? <Text style={styles.signupLink}>Inicia sesión</Text>
           </Text>
-          <Text style={styles.forgotPassword}>¿Has olvidado la contraseña?</Text>
-          <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.loginButtonText}>Iniciar Sesión</Text>
+          <TouchableOpacity style={styles.registerButton}>
+            <Text style={styles.registerButtonText}>Registrarse</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -56,41 +57,35 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   loginTitle: {
-    fontFamily: 'Inter', // Establece la fuente a "Inter"
+    fontFamily: 'Inter',
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    textAlign: 'center', // Centra el título
+    textAlign: 'center',
   },
   input: {
-    backgroundColor: '#D0E0EB',
+    backgroundColor: 'white',
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,
   },
   signupText: {
-    textAlign: 'center',
     color: '#49708A',
   },
   signupLink: {
     color: '#CAFF42',
   },
-  forgotPassword: {
-    textAlign: 'center',
-    color: '#49708A',
-    marginTop: 10,
-  },
-  loginButton: {
+  registerButton: {
     backgroundColor: '#CAFF42',
     padding: 15,
     borderRadius: 5,
     marginTop: 20,
   },
-  loginButtonText: {
+  registerButtonText: {
     color: '#49708A',
     textAlign: 'center',
     fontWeight: 'bold',
   },
 });
 
-export default App;
+export default register;
