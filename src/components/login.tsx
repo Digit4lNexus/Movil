@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import {View, Text} from 'react-native';
 
 import {
   SafeAreaView,
@@ -10,10 +10,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-function login(): JSX.Element {
+function Login(): JSX.Element {
   return (
-    <View>
-        <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#49708A" />
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.loginBox}>
@@ -22,18 +21,23 @@ function login(): JSX.Element {
             style={styles.input}
             placeholder="Nombre de usuario/Correo electrónico"
           />
-          <TextInput style={styles.input} placeholder="Contraseña" secureTextEntry={true} />
+          <TextInput
+            style={styles.input}
+            placeholder="Contraseña"
+            secureTextEntry={true}
+          />
           <Text style={styles.signupText}>
             ¿No tienes cuenta? <Text style={styles.signupLink}>Regístrate</Text>
           </Text>
-          <Text style={styles.forgotPassword}>¿Has olvidado la contraseña?</Text>
+          <Text style={styles.forgotPassword}>
+            ¿Has olvidado la contraseña?
+          </Text>
           <TouchableOpacity style={styles.loginButton}>
             <Text style={styles.loginButtonText}>Iniciar Sesión</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
-    </View>
   );
 }
 
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     shadowColor: 'black',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.3,
     shadowRadius: 3,
     elevation: 5,
@@ -95,4 +99,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default login;
+export default Login;
